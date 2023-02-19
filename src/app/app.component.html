@@ -1,9 +1,15 @@
-<body [ngClass]="{dark: darkMode}" class="font-Montserrat">
-  <app-navbar
-  (toggleMode)="toggleDarkMode()"
-  ></app-navbar>
+<body [ngClass]="{ dark: darkMode }" class="font-Montserrat">
+  <app-navbar (toggleMode)="toggleDarkMode()"></app-navbar>
 
-  <app-hero></app-hero>
+  <main>
+    <app-hero></app-hero>
+
+    <app-projects></app-projects>
+
+    <app-tools></app-tools>
+  </main>
+
+  <footer>
+    <app-contactme></app-contactme>
+  </footer>
 </body>
-
-

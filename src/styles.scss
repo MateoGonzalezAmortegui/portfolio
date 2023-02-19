@@ -6,3 +6,18 @@
 html{
   font-family: "Montserrat", "sans-serif";
 }
+.card{
+  @apply bg-whites max-w-xs rounded-lg shadow-xl dark:bg-Gray3
+}
+
+.efect_card{
+  @apply transform transition-all hover:-translate-y-4 hover:shadow-xl hover:shadow-cyan-500
+}
+
+.effect_button{
+  @apply transition-all duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110
+}
+
+.effect_nav{
+  @apply transform transition-all hover:-translate-y-2 hover:shadow-xl hover:shadow-cyan-500 hover:border hover:border-cyan-500
+}
