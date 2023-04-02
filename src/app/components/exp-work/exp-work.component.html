@@ -1,0 +1,57 @@
+<div class="w-full h-[30rem] md:h-0 md:w-0 sm:h-[24rem]"></div>
+<section class="w-11/12 my-0 mx-auto mb-12 md:mt-12">
+  <p
+    data-aos="fade-up-right"
+    class="text-3xl font-blacks font-semibold drop-shadow-md dark:text-Blues"
+  >
+    WORK EXPERIENCE
+  </p>
+
+  <article
+    data-aos="fade-right"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-sine"
+    class="mt-9"
+  >
+    <div class="lg:grid lg:grid-cols-5">
+      <div
+        class="flex space-x-4 border-b-2 pb-2 font-semibold lg:grid lg:grid-rows-4 lg:gap-4 lg:border-0"
+      >
+        <button
+          (click)="toogleExp()"
+          class="text-center p-2 rounded-md row-start-2 lg:w-10/12 lg:my-0 lg:mx-auto"
+          [ngClass]="{ exp: select1, exp_hover: !select1 }"
+        >
+          Bancamia Bank
+        </button>
+
+        <button
+          (click)="toogleExp2()"
+          class="text-center p-2 rounded-md row-start-3 lg:w-10/12 lg:my-0 lg:mx-auto"
+          [ngClass]="{ exp: select2, exp_hover: !select2 }"
+        >
+          Distrital University
+        </button>
+      </div>
+
+      <div
+        class="p-6 border-x-2 border-b-2 rounded-md shadow-md dark:shadow-purple-500 shadow-cyan-500 lg:col-start-2 lg:col-span-4 lg:w-10/12 lg:my-0 lg:mx-auto lg:p-12"
+      >
+        <div class="space-y-6">
+          <h3 class="font-bold text-lg text-Blues dark:text-purples">
+            {{ tittle }}
+          </h3>
+          <p>
+            {{ p1 }}
+          </p>
+          <p>
+            {{ p2 }}
+          </p>
+          <p>
+            {{ p3 }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>

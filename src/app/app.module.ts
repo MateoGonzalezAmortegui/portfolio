@@ -11,6 +11,7 @@ import { ToolsComponent } from './components/tools/tools.component';
 
 import { BtnComponent } from './components/btn/btn.component';
 import { CardsComponent } from './components/cards/cards.component';
+import { ExpWorkComponent } from './components/exp-work/exp-work.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { CardsComponent } from './components/cards/cards.component';
     ToolsComponent,
     BtnComponent,
     CardsComponent,
+    ExpWorkComponent,
   ],
   imports: [
     BrowserModule,
