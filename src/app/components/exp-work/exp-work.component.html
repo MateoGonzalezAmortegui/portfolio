@@ -1,10 +1,20 @@
-<div class="w-full h-[30rem] md:h-0 md:w-0 sm:h-[24rem]"></div>
-<section class="w-11/12 my-0 mx-auto mb-12 md:mt-12">
+<div class="w-full h-[35rem] md:h-0 md:w-0 sm:h-[28rem]"></div>
+<section class="w-11/12 my-0 mx-auto mb-12 md:mt-8">
+  <!-- TITTLE -->
   <p
+    *ngIf="!(language$ | async)"
     data-aos="fade-up-right"
     class="text-3xl font-blacks font-semibold drop-shadow-md dark:text-Blues"
   >
     WORK EXPERIENCE
+  </p>
+
+  <p
+    *ngIf="language$ | async"
+    data-aos="fade-up-right"
+    class="text-3xl font-blacks font-semibold drop-shadow-md dark:text-Blues"
+  >
+    EXPERIENCIA LABORAL
   </p>
 
   <article
@@ -17,7 +27,9 @@
       <div
         class="flex space-x-4 border-b-2 pb-2 font-semibold lg:grid lg:grid-rows-4 lg:gap-4 lg:border-0"
       >
+        <!-- BUTTONS -->
         <button
+          *ngIf="!(language$ | async)"
           (click)="toogleExp()"
           class="text-center p-2 rounded-md row-start-2 lg:w-10/12 lg:my-0 lg:mx-auto"
           [ngClass]="{ exp: select1, exp_hover: !select1 }"
@@ -26,29 +38,95 @@
         </button>
 
         <button
+          *ngIf="language$ | async"
+          (click)="toogleExp()"
+          class="text-center p-2 rounded-md row-start-2 lg:w-10/12 lg:my-0 lg:mx-auto"
+          [ngClass]="{ exp: select1, exp_hover: !select1 }"
+        >
+          Banco Bancamia
+        </button>
+
+        <button
+          *ngIf="!(language$ | async)"
           (click)="toogleExp2()"
           class="text-center p-2 rounded-md row-start-3 lg:w-10/12 lg:my-0 lg:mx-auto"
           [ngClass]="{ exp: select2, exp_hover: !select2 }"
         >
           Distrital University
         </button>
+
+        <button
+          *ngIf="language$ | async"
+          (click)="toogleExp2()"
+          class="text-center p-2 rounded-md row-start-3 lg:w-10/12 lg:my-0 lg:mx-auto"
+          [ngClass]="{ exp: select2, exp_hover: !select2 }"
+        >
+          Universidad Distrital
+        </button>
       </div>
 
       <div
         class="p-6 border-x-2 border-b-2 rounded-md shadow-md dark:shadow-purple-500 shadow-cyan-500 lg:col-start-2 lg:col-span-4 lg:w-10/12 lg:my-0 lg:mx-auto lg:p-12"
       >
-        <div class="space-y-6">
+        <!--  JOBS -->
+        <div class="space-y-6" *ngIf="select1 && language$ | async">
           <h3 class="font-bold text-lg text-Blues dark:text-purples">
-            {{ tittle }}
+            ➤ Semillero JR
           </h3>
           <p>
-            {{ p1 }}
+            ✅ Desarrollo e implementación de Microservicios, frontend y
+            desarrollo mobile bajo metodologías Scrum.
           </p>
           <p>
-            {{ p2 }}
+            📝1. Mantenimiento y depuración de diferentes proyectos para mejorar
+            el rendimiento y tener un código limpio.
           </p>
           <p>
-            {{ p3 }}
+            📝2. Desarrollo de implementaciones o servicios para clientes de la
+            red.
+          </p>
+        </div>
+
+        <div class="space-y-6" *ngIf="select1 && !(language$ | async)">
+          <h3 class="font-bold text-lg text-Blues dark:text-purples">
+            ➤ Developer JR
+          </h3>
+          <p>
+            ✅Development and implementation of Microservices, web pages and
+            development mobile under Scrum methodologies.
+          </p>
+          <p>
+            📝1. Maintenance and debugging of different projects to improve
+            performance and have clean code.
+          </p>
+          <p>
+            📝2. Development of implementations or services for network
+            customers.
+          </p>
+        </div>
+
+        <div class="space-y-6" *ngIf="select2 && language$ | async">
+          <h3 class="font-bold text-lg text-Blues dark:text-purples">
+            ➤ Asistente monitor - Curso Digitales II
+          </h3>
+          <p>✅ Acompañamiento del proceso educativo de los estudiantes.</p>
+          <p>
+            📝1. Realizar tutorías y asesorías para la realización de los
+            laboratorios de programación y desarrollo de software
+            correspondientes al curso con lenguajes Python, Java, JavaScript,
+            HTML, CSS.
+          </p>
+        </div>
+
+        <div class="space-y-6" *ngIf="select2 && !(language$ | async)">
+          <h3 class="font-bold text-lg text-Blues dark:text-purples">
+            ➤ Assistant instructor - Digital II course
+          </h3>
+          <p>✅ Accompanying the educational process of the students.</p>
+          <p>
+            📝1. Perform tutoring and counseling for the realization of
+            programming and software development laboratories corresponding to
+            the course with Python, Java, JavaScript, HTML, CSS languages.
           </p>
         </div>
       </div>
