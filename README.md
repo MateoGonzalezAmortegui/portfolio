@@ -1,27 +1,33 @@
-# Portfolio
+<a name="top"></a>
+# 🚀 MY PORTFOLIO
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
-## Development server
+### My portfolio with layout HTML, Tailwind and using to Framework like Angular, Was create for show my skills, projects and for show a little bit about me It´s a page with interaction in all website !! Was implementing so that was: Responsive design and Dark Mode, Language translation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Was implementing so that was:
+- ### [Responsive design](#mobile)
+- ### [Dark mode](#dark)
+- ### [Languages translation](#tr)
 
-## Code scaffolding
+View page => https://mateogonzalezamortegui.github.io/portfolio/
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Desktop View: <a name="desk"></a>
 
-## Build
+### HOME
+![image](https://user-images.githubusercontent.com/108773631/229937484-5cca2e81-a891-4812-b310-00992d984af3.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Dark Mode <a name="dark"></a>
+![image](https://user-images.githubusercontent.com/108773631/229937405-712cf504-b446-4cb3-835b-f7866fabd4e2.png)
 
-## Running unit tests
+## Mobile View: <a name="mobile"></a>
+![image](https://user-images.githubusercontent.com/108773631/229937652-e4f3ed6e-a857-458b-a017-8b432d728fa2.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Languages translation <a name="tr"></a>
+![image](https://user-images.githubusercontent.com/108773631/229937811-de29049a-ad95-4073-91e8-ae64ff006972.png)
 
-## Running end-to-end tests
+![image](https://user-images.githubusercontent.com/108773631/229937748-1f047c54-e51e-477e-9aab-60aece92954a.png)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- [Desktop View](#desk)
+- [Go up](#top)
