@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { IdiomService } from 'src/app/services/idiom.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,6 +7,8 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
+  constructor(private idiom: IdiomService) {}
+
   @Output() toggleMode = new EventEmitter<string>();
   toggleDarkMode() {
     this.toggleMode.emit();
@@ -19,6 +22,7 @@ export class NavbarComponent {
     this.eng = !this.eng;
     this.toggleIdiom.emit();
     this.textFile();
+    this.idiom.change();
   }
 
   aboutMe: string = 'Acerca de mi';
