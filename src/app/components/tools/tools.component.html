@@ -4,7 +4,18 @@
     data-aos-duration="2000"
     class="w-11/12 my-0 mx-auto"
   >
-    <p class="text-3xl font-semibold drop-shadow-md py-8 text-Blues">TOOLS</p>
+    <p
+      *ngIf="!(language$ | async)"
+      class="text-3xl font-semibold drop-shadow-md py-8 text-Blues"
+    >
+      TOOLS
+    </p>
+    <p
+      *ngIf="language$ | async"
+      class="text-3xl font-semibold drop-shadow-md py-8 text-Blues"
+    >
+      HERRAMIENTAS
+    </p>
   </div>
 
   <div

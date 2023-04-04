@@ -4,40 +4,90 @@
   data-aos-easing="ease-out-cubic"
   data-aos-duration="2500"
 >
-
   <div class="relative">
+    <div *ngIf="page == 1">
+      <img
+        [src]="img1"
+        class="w-full h-96 object-cover"
+        data-aos="fade-left"
+        data-aos-offset="500"
+        data-aos-duration="2000"
+      />
+    </div>
 
-        <div *ngIf="page==1">
-            <img [src]="img1" class="w-full h-96 object-cover"  data-aos="fade-left"
-            data-aos-offset="500"
-            data-aos-duration="2000">
-        </div>
+    <div *ngIf="page == 2">
+      <img
+        [src]="img2"
+        class="w-full h-96 object-cover"
+        data-aos="fade-left"
+        data-aos-offset="500"
+        data-aos-duration="2000"
+      />
+    </div>
 
-        <div *ngIf="page==2">
-            <img [src]="img2" class="w-full h-96 object-cover"  data-aos="fade-left"
-            data-aos-offset="500"
-            data-aos-duration="2000">
-        </div>
-
-        <div *ngIf="page==3">
-            <img [src]="img3" class="w-full h-96 object-cover"  data-aos="fade-left"
-            data-aos-offset="500"
-            data-aos-duration="2000">
-        </div>
+    <div *ngIf="page == 3">
+      <img
+        [src]="img3"
+        class="w-full h-96 object-cover"
+        data-aos="fade-left"
+        data-aos-offset="500"
+        data-aos-duration="2000"
+      />
+    </div>
 
     <!-- Slider controls -->
-    <button (click)="backPage()" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" >
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-cyan-500/60 dark:bg-purples/60 group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg aria-hidden="true" class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path class="fill-current text-whites" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-            <span class="sr-only">Previous</span>
-        </span>
+    <button
+      (click)="backPage()"
+      class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+    >
+      <span
+        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-cyan-500/60 dark:bg-purples/60 group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+      >
+        <svg
+          aria-hidden="true"
+          class="w-6 h-6 text-white dark:text-gray-800"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            class="fill-current text-whites"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"
+          ></path>
+        </svg>
+        <span class="sr-only">Previous</span>
+      </span>
     </button>
 
-    <button (click)="nextPage()" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none">
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-cyan-500/60 dark:bg-purples/60 group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg aria-hidden="true" class="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path class="fill-current text-whites" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-            <span class="sr-only">Next</span>
-        </span>
+    <button
+      (click)="nextPage()"
+      class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+    >
+      <span
+        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-cyan-500/60 dark:bg-purples/60 group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+      >
+        <svg
+          aria-hidden="true"
+          class="w-6 h-6 text-white dark:text-gray-800"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            class="fill-current text-whites"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 5l7 7-7 7"
+          ></path>
+        </svg>
+        <span class="sr-only">Next</span>
+      </span>
     </button>
   </div>
 
@@ -178,7 +228,8 @@
           aria-label="TypeScript"
           role="img"
           viewBox="0 0 512 512"
-          width="48px" height="48px"
+          width="48px"
+          height="48px"
         >
           <rect width="512" height="512" rx="15%" fill="#3178c6" />
           <path
@@ -207,8 +258,17 @@
         </svg>
       </a>
 
-      <app-btn [icons]="'rocket'" [urlPage]="urlPageGithub"
+      <app-btn
+        *ngIf="!(language$ | async)"
+        [icons]="'rocket'"
+        [urlPage]="urlPageGithub"
         >Watch page!</app-btn
+      >
+      <app-btn
+        *ngIf="language$ | async"
+        [icons]="'rocket'"
+        [urlPage]="urlPageGithub"
+        >Ver pagina!</app-btn
       >
     </div>
   </div>

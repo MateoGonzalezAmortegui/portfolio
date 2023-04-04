@@ -1,5 +1,6 @@
 <section id="footer" class="w-11/12 my-0 mx-auto mt-8 mb-8 md:mb-12">
   <p
+    *ngIf="!(language$ | async)"
     data-aos="fade-zoom-in"
     data-aos-easing="ease-in-back"
     data-aos-delay="300"
@@ -7,6 +8,16 @@
     class="text-3xl font-blacks font-semibold drop-shadow-md dark:text-Blues"
   >
     CONTACT ME
+  </p>
+  <p
+    *ngIf="language$ | async"
+    data-aos="fade-zoom-in"
+    data-aos-easing="ease-in-back"
+    data-aos-delay="300"
+    data-aos-offset="0"
+    class="text-3xl font-blacks font-semibold drop-shadow-md dark:text-Blues"
+  >
+    CONTACTAME
   </p>
   <article
     data-aos="fade-up"
