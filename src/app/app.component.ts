@@ -1,23 +1,28 @@
-import { Component, OnInit, ViewEncapsulation} from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  encapsulation:ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'portfolio';
 
-  darkMode:boolean=true;
+  darkMode: boolean = true;
 
-  toggleDarkMode(){
-    this.darkMode=!this.darkMode;
+  toggleDarkMode() {
+    this.darkMode = !this.darkMode;
   }
 
-  ngOnInit(){
+  ngOnInit() {
     AOS.init();
-    window.addEventListener('load',AOS.refresh)
+    window.addEventListener('load', AOS.refresh);
+  }
+
+  esp: boolean = true;
+  toggleLanguage() {
+    this.esp = !this.esp;
   }
 }

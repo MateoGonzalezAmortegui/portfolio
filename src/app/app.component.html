@@ -1,5 +1,8 @@
 <body [ngClass]="{ dark: darkMode }" class="font-Montserrat">
-  <app-navbar (toggleMode)="toggleDarkMode()"></app-navbar>
+  <app-navbar
+    (toggleMode)="toggleDarkMode()"
+    (toggleIdiom)="toggleLanguage()"
+  ></app-navbar>
 
   <main>
     <app-hero></app-hero>

@@ -19,25 +19,57 @@
         Mateo Gonzalez Amortegui
       </h1>
 
+      <!--JOB TITTLE -->
       <p
+        *ngIf="!(language$ | async)"
         class="text-Gray2 text-lg font-medium drop-shadow-md md:text-Gray1 md:text-xl md:font-semibold md:drop-shadow-lg lg:text-2xl lg:font-extrabold"
       >
         Frontend Developer Jr
       </p>
 
       <p
+        *ngIf="language$ | async"
+        class="text-Gray2 text-lg font-medium drop-shadow-md md:text-Gray1 md:text-xl md:font-semibold md:drop-shadow-lg lg:text-2xl lg:font-extrabold"
+      >
+        Desarollador Frontend Jr
+      </p>
+
+      <!-- TECH -->
+      <p
+        *ngIf="!(language$ | async)"
         class="text-Gray4 text-sm font-normal drop-shadow-sm md:text-Gray1 md:text-base md:font-medium lg:text-lg lg:font-semibold dark:text-Blues"
       >
-        |Angular| |React| |CSS/SASS, Tailwind| Microservices |Java/Spring Boot|
-        |MySQL|
+        |Angular| |React/Next.js| |CSS/SASS, Tailwind| |TypeScript|
+        Microservices |Node.js| |Java/Spring Boot| |MySQL|
       </p>
 
       <p
+        *ngIf="language$ | async"
+        class="text-Gray4 text-sm font-normal drop-shadow-sm md:text-Gray1 md:text-base md:font-medium lg:text-lg lg:font-semibold dark:text-Blues"
+      >
+        |Angular| |React/Next.js| |CSS/SASS, Tailwind| |TypeScript| Micro
+        servicios |Node.js| |Java/Spring Boot| |MySQL|
+      </p>
+
+      <!-- DESCRIPTION -->
+      <p
+        *ngIf="!(language$ | async)"
         class="text-blacks text-base font-light text-justify md:text-whites md:font-medium lg:drop-shadow-xl lg:text-xl lg:font-extrabold"
       >
-        Telecommunications Engineering at Universidad Distrital. With knowledge
-        and experience in front-end development, microservices and mobile
-        development
+        Telecommunications Engineer with more than 1 year of experience in
+        front-end development, responsive layout, microservices, use of GIT
+        versioning, integration with APIs and REST Webservices and mobile
+        development under Scrum methodologies.
+      </p>
+
+      <p
+        *ngIf="language$ | async"
+        class="text-blacks text-base font-light text-justify md:text-whites md:font-medium lg:drop-shadow-xl lg:text-xl lg:font-extrabold"
+      >
+        Ingeniero en Telecomunicaciones con mas de 1 año de experiencia en
+        desarrollo front-end, maquetación responsive, micro servicios, uso de
+        versiona miento GIT, integracion con APIs y Webservices REST y
+        desarrollo móvil bajo metodologias Scrum.
       </p>
 
       <div class="flex justify-evenly pt-4 space-x-4 md:pt-2 drop-shadow-md">
@@ -61,9 +93,27 @@
             ></path>
           </svg>
         </a>
-        <app-btn [icons]="'resume'" [size]="'large'" [sizeIcon]="'large'">
-          <a href="../../../assets/Mateo Gonzalez Amortegui HV.pdf" download
+
+        <!--  RESUME -->
+        <app-btn
+          *ngIf="!(language$ | async)"
+          [icons]="'resume'"
+          [size]="'large'"
+          [sizeIcon]="'large'"
+        >
+          <a href="../../../assets/Mateo Gonzalez Amortegui CV.pdf" download
             >Resume</a
+          >
+        </app-btn>
+
+        <app-btn
+          *ngIf="language$ | async"
+          [icons]="'resume'"
+          [size]="'large'"
+          [sizeIcon]="'large'"
+        >
+          <a href="../../../assets/Mateo Gonzalez Amortegui HV.pdf" download
+            >Hoja de vida</a
           >
         </app-btn>
       </div>
